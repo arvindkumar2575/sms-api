@@ -4,7 +4,9 @@ import org.springframework.stereotype.Component;
 
 @Component
 public interface CommonService {
-    boolean isNull(String value);
+    boolean isStringNull(String value);
+    
+    boolean isLongNull(Long value);
 
     boolean isValidGender(String gender);
     

@@ -1,12 +1,13 @@
 package com.arvindkumar2575.sms_api.models;
 
-import com.arvindkumar2575.sms_api.models.errors.ErrorModel;
+import com.arvindkumar2575.sms_api.models.errors.ErrorResponseModel;
 
 import lombok.Data;
 
 @Data
 public class ResponseModel {
-    private ErrorModel error;
+    private boolean valid;
+    private ErrorResponseModel error;
     private Object response;
     
 }

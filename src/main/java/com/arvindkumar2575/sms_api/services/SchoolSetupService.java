@@ -9,6 +9,6 @@ import com.arvindkumar2575.sms_api.models.SchoolSetupModel;
 public interface SchoolSetupService {
     boolean validateSchoolSetupData(SchoolSetupModel model);
 
-    ResponseModel schoolSetup(SchoolSetupModel model);
+    ResponseModel schoolSetup(ResponseModel responseModel, SchoolSetupModel model);
     
 }

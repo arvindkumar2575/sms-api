@@ -10,6 +10,7 @@ public class CommonConstant {
     public static final String[] GENDER = {"M","F","O"};
 
     //  static errors
-    public static final ResponseModel DEFAULT_PAYLOAD_ERROR_JSON = new Gson().fromJson("{'error':{'status':404,'message':'Error in payload!'}}",ResponseModel.class);
+    public static final ResponseModel DEFAULT_PAYLOAD_ERROR_JSON = new Gson().fromJson("{'error':{'status':400,'message':'Error in payload!'}}",ResponseModel.class);
+    public static final ResponseModel DEFAULT_DATA_ERROR_JSON = new Gson().fromJson("{'error':{'status':404,'message':'Data not found!'}}",ResponseModel.class);
     
 }

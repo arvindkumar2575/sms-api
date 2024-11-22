@@ -16,22 +16,26 @@ public class CommonServiceImpl implements CommonService {
      * @return
      */
     @Override
-    public boolean isNull(String value) {
-        if (value.isBlank() || value.isEmpty()) {
-            System.out.println("value is null");
+    public boolean isStringNull(String value) {
+        if (value==null || value.isEmpty() || value.isBlank()) {
             return true;
         }
-        System.out.println("value is not null");
         return false;
     }
 
     @Override
     public boolean isValidGender(String gender) {
         if (!Arrays.stream(CommonConstant.GENDER).anyMatch(gender::equals)) {
-            System.out.println("value is null");
             return true;
         }
-        System.out.println("value is not null");
+        return false;
+    }
+
+    @Override
+    public boolean isLongNull(Long value) {
+        if (value==null || value.longValue()<1) {
+            return true;
+        }
         return false;
     }
     
